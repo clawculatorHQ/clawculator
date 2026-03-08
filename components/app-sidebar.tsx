@@ -41,12 +41,12 @@ export function AppSidebar() {
             >
               <Link href="/">
                 <div className="flex aspect-square size-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <img src="/delphi-lowlod.png" width={64} height={64} alt="delphitools logo" className="rounded-lg border-2 border-green-800" />
+                  <img src="/clawculator.webp" width={64} height={64} alt="Clawculator logo" className="rounded-lg" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">delphitools</span>
+                  <span className="font-semibold">Clawculator</span>
                   <span className="text-xs text-muted-foreground">
-                    handmade tools
+                    Stateless Utility Engine
                   </span>
                 </div>
               </Link>
@@ -66,7 +66,6 @@ export function AppSidebar() {
               >
                 <Link href="/">
                   <Home className="size-4" />
-                  <span>Home</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -136,8 +135,12 @@ export function AppSidebar() {
         <Dialog>
           <DialogTrigger asChild>
             <button className="w-full p-2 text-xs text-muted-foreground text-left hover:bg-sidebar-accent rounded-md transition-colors group-data-[collapsible=icon]:hidden">
-              <p>No logins. No tracking.</p>
-              <p className="mt-1 opacity-70">Long live the handmade web.</p>
+              <p>© 2026 Clawculator</p>
+              <p className="mt-1 opacity-70">
+                <a href="mailto:hello@clawculator.com" className="hover:text-primary transition-colors">
+                  hello@clawculator.com
+                </a>
+              </p>
             </button>
           </DialogTrigger>
           <DialogTrigger asChild>
@@ -147,42 +150,41 @@ export function AppSidebar() {
           </DialogTrigger>
           <DialogContent className="max-w-lg">
             <DialogHeader>
-              <DialogTitle>About delphitools</DialogTitle>
+              <DialogTitle>About Clawculator</DialogTitle>
             </DialogHeader>
             <div className="space-y-4 text-sm text-muted-foreground">
               <p>
-                delphitools is a collection of small, focused utilities that respect your privacy
-                and work entirely in your browser. No data leaves your machine, no accounts required,
-                no tracking. Just tools that do what they say.
+                Clawculator is a minimalist toolkit for human builders and agentic systems.
+                Zero tracking. Zero databases. No accounts, no data harvesting.
+                Pure utility built on first principles.
               </p>
               <p>
-                I love the web. The classic, real web full of weird things. And that web is out there. You just have to find it. And sometimes, you have to make it yourself.
+                Everything runs in your browser. No data leaves your machine.
+                Just tools that do exactly what they say.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 text-sm pt-4 border-t">
               <div className="space-y-1">
-                <h3 className="font-medium text-foreground">Made by</h3>
+                <h3 className="font-medium text-foreground">Contact</h3>
                 <p className="text-muted-foreground">
-                  <a
-                    href="https://rmv.fyi"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  
+                    href="mailto:hello@clawculator.com"
                     className="hover:text-primary transition-colors"
                   >
-                    delphi
+                    hello@clawculator.com
                   </a>
                 </p>
               </div>
               <div className="space-y-1">
                 <h3 className="font-medium text-foreground">Source</h3>
                 <p className="text-muted-foreground">
-                  <a
-                    href="https://github.com/1612elphi/delphitools"
+                  
+                    href="https://github.com/clawculatorHQ/clawculator"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors"
                   >
-                    1612elphi/delphitools
+                    clawculatorHQ/clawculator
                   </a>
                 </p>
               </div>
@@ -195,38 +197,4 @@ export function AppSidebar() {
                   { name: "React", url: "https://react.dev" },
                   { name: "Tailwind CSS", url: "https://tailwindcss.com" },
                   { name: "shadcn/ui", url: "https://ui.shadcn.com" },
-                  { name: "Radix UI", url: "https://radix-ui.com" },
-                  { name: "Lucide", url: "https://lucide.dev" },
-                ].map((lib) => (
-                  <a
-                    key={lib.name}
-                    href={lib.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs px-2 py-1 rounded-md bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {lib.name}
-                  </a>
-                ))}
-              </div>
-              <p className="text-xs text-muted-foreground/60 pt-2">
-                Plus{" "}
-                <a
-                  href="https://github.com/1612elphi/delphitools/blob/main/ACKNOWLEDGEMENTS.md"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-muted-foreground transition-colors"
-                >
-                  many more open source libraries
-                </a>
-                .
-              </p>
-            </div>
-          </DialogContent>
-        </Dialog>
-      </SidebarFooter>
-
-      <SidebarRail />
-    </Sidebar>
-  );
-}
+                  { name: "Radix U
