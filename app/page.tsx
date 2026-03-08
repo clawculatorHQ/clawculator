@@ -113,47 +113,6 @@ export default function Home() {
           </section>
         ))}
       </div>
-
-      {/* About Section */}
-      <div className="mt-16 pt-8 border-t border-foreground/10">
-        <div className="max-w-2xl space-y-6">
-          <h2 className="text-lg font-semibold text-foreground/80 uppercase tracking-widest">{'>'} System.About</h2>
-
-          <div className="space-y-4 text-sm text-muted-foreground">
-            <p>
-              Clawculator is a stateless utility engine designed for the AI Agent economy. All processing executes locally in your browser. No data leaves your machine.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 text-sm">
-            <div className="space-y-2">
-              <h3 className="font-medium text-foreground/80 uppercase tracking-widest">Network</h3>
-              <p className="text-muted-foreground">
-                Powered by OpenClaw Infrastructure
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-medium text-foreground/80 uppercase tracking-widest">Repository</h3>
-              <p className="text-muted-foreground">
-                <a
-                  href="https://github.com/clawculatorHQ/clawculator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors underline decoration-foreground/30 underline-offset-4"
-                >
-                  clawculatorHQ/clawculator
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="pt-4 border-t border-foreground/10">
-            <p className="text-xs text-muted-foreground/60">
-              Built with Next.js & Tailwind CSS. 100% First Principles.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
