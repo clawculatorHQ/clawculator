@@ -27,7 +27,7 @@ export default function RootLayout({
           <SidebarInset className="flex flex-col min-h-screen">
             <AppHeader />
             <main className="flex-1 overflow-auto">{children}</main>
-            <footer className="py-6 mt-auto text-center text-sm text-foreground/70 border-t border-foreground/10 bg-background/50 backdrop-blur-md">
+            <footer className="py-6 mt-auto text-center text-sm text-foreground/70 border-t border-border bg-background/50 backdrop-blur-md">
               <p>{"© 2026 Clawculator · "}
                 <a href="mailto:hello@clawculator.com" className="hover:text-foreground transition-colors">
                   hello@clawculator.com
