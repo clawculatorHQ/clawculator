@@ -197,4 +197,26 @@ export function AppSidebar() {
                   { name: "React", url: "https://react.dev" },
                   { name: "Tailwind CSS", url: "https://tailwindcss.com" },
                   { name: "shadcn/ui", url: "https://ui.shadcn.com" },
-                  { name: "Radix U
+                  { name: "Radix UI", url: "https://radix-ui.com" },
+                  { name: "Lucide", url: "https://lucide.dev" },
+                ].map((lib) => (
+                  
+                    key={lib.name}
+                    href={lib.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-2 py-1 rounded-md bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {lib.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </SidebarFooter>
+
+      <SidebarRail />
+    </Sidebar>
+  );
+}
