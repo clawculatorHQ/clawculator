@@ -6,13 +6,13 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { AppHeader } from "@/components/app-header";
 
 export const metadata: Metadata = {
-  title: "delphitools",
+  title: "Clawculator | Stateless Utility Engine",
   description:
-    "A collection of small, low stakes and low effort tools. No logins, no registration, no data collection.",
+    "The ultimate minimalist hack-proof toolkit for executing daily web tasks.",
   icons: {
-    icon: "/delphi-lowlod.png",
-    shortcut: "/delphi-lowlod.png",
-    apple: "/delphi-lowlod.png",
+    icon: "/clawculator.webp",
+    shortcut: "/clawculator.webp",
+    apple: "/clawculator.webp",
   },
 };
 
@@ -26,9 +26,12 @@ export default function RootLayout({
       <body className="font-mono antialiased">
         <SidebarProvider>
           <AppSidebar />
-          <SidebarInset>
+          <SidebarInset className="flex flex-col min-h-screen">
             <AppHeader />
             <main className="flex-1 overflow-auto">{children}</main>
+            <footer className="py-6 mt-auto text-center text-sm text-foreground/70 border-t border-foreground/10 bg-background/50 backdrop-blur-md">
+              <p>2026. Acquire Domain: <a href="mailto:hello@clawculator.com" className="hover:text-foreground transition-colors">hello@clawculator.com</a></p>
+            </footer>
           </SidebarInset>
         </SidebarProvider>
       </body>
