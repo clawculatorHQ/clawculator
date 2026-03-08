@@ -40,9 +40,7 @@ export function AppSidebar() {
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Link href="/">
-                <div className="flex aspect-square size-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <img src="/clawculator.webp" width={64} height={64} alt="Clawculator logo" className="rounded-lg" />
-                </div>
+               <img src="/clawculator.webp" width={48} height={48} alt="Clawculator logo" className="rounded-lg" />
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">Clawculator</span>
                   <span className="text-xs text-muted-foreground">Stateless Utility Engine</span>
