@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Info, Star } from "lucide-react";
+import { Home, Star } from "lucide-react";
 
 import { toolCategories, featuredTools } from "@/lib/tools";
 import {
@@ -18,13 +18,6 @@ import {
   SidebarFooter,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -40,10 +33,9 @@ export function AppSidebar() {
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Link href="/">
-               <img src="/clawculator.webp" width={48} height={48} alt="Clawculator logo" className="rounded-lg" />
+                <img src="/clawculator.webp" width={48} height={48} alt="Clawculator logo" />
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">Clawculator</span>
-                  <span className="text-xs text-muted-foreground">Stateless Utility Engine</span>
                 </div>
               </Link>
             </SidebarMenuButton>
@@ -120,53 +112,9 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="border-t border-sidebar-border">
-        <Dialog>
-          <DialogTrigger asChild>
-            <button className="w-full p-2 text-xs text-muted-foreground text-left hover:bg-sidebar-accent rounded-md transition-colors group-data-[collapsible=icon]:hidden">
-              <p>{"© 2026 Clawculator"}</p>
-              <p className="mt-1 opacity-70">hello@clawculator.com</p>
-            </button>
-          </DialogTrigger>
-          <DialogTrigger asChild>
-            <button className="hidden group-data-[collapsible=icon]:flex w-full p-2 items-center justify-center hover:bg-sidebar-accent rounded-md transition-colors">
-              <Info className="size-4 text-muted-foreground" />
-            </button>
-          </DialogTrigger>
-          <DialogContent className="max-w-lg">
-            <DialogHeader>
-              <DialogTitle>About Clawculator</DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4 text-sm text-muted-foreground">
-              <p>
-                Clawculator is a minimalist toolkit for human builders and agentic systems.
-                Zero tracking. Zero databases. No accounts, no data harvesting.
-                Pure utility built on first principles.
-              </p>
-              <p>
-                Everything runs in your browser. No data leaves your machine.
-                Just tools that do exactly what they say.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 text-sm pt-4 border-t">
-              <div className="space-y-1">
-                <h3 className="font-medium text-foreground">Contact</h3>
-                <p className="text-muted-foreground">hello@clawculator.com</p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-medium text-foreground">Source</h3>
-                <p className="text-muted-foreground">clawculatorHQ/clawculator</p>
-              </div>
-            </div>
-            <div className="pt-4 border-t space-y-2">
-              <h3 className="font-medium text-foreground text-sm">Built with</h3>
-              <div className="flex flex-wrap gap-1.5">
-                {["Next.js", "React", "Tailwind CSS", "shadcn/ui", "Radix UI", "Lucide"].map((lib) => (
-                  <span key={lib} className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">{lib}</span>
-                ))}
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
+        <p className="text-xs text-muted-foreground p-2 group-data-[collapsible=icon]:hidden">
+          Stateless Utility Engine
+        </p>
       </SidebarFooter>
 
       <SidebarRail />
