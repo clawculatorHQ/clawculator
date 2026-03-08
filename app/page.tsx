@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="mt-6 max-w-2xl space-y-4 text-muted-foreground">
           <p className="text-lg font-bold text-foreground uppercase tracking-widest">
-            > {`Stateless Utility Engine`}
+            {'>'} Stateless Utility Engine
           </p>
           <p className="text-base leading-relaxed">
             A minimalist toolkit for human builders and agentic systems. Zero tracking. Zero databases. No accounts, no data harvesting. Pure utility built on first principles.
@@ -77,7 +77,7 @@ export default function Home() {
         {toolCategories.map((category) => (
           <section key={category.id}>
             <h2 className="text-lg font-semibold mb-4 text-foreground/80 uppercase tracking-widest">
-              > {category.name}
+              {'>'} {category.name}
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {category.tools.map((tool) => {
@@ -117,7 +117,7 @@ export default function Home() {
       {/* About Section */}
       <div className="mt-16 pt-8 border-t border-foreground/10">
         <div className="max-w-2xl space-y-6">
-          <h2 className="text-lg font-semibold text-foreground/80 uppercase tracking-widest">> System.About</h2>
+          <h2 className="text-lg font-semibold text-foreground/80 uppercase tracking-widest">{'>'} System.About</h2>
 
           <div className="space-y-4 text-sm text-muted-foreground">
             <p>
