@@ -137,9 +137,7 @@ export function AppSidebar() {
             <button className="w-full p-2 text-xs text-muted-foreground text-left hover:bg-sidebar-accent rounded-md transition-colors group-data-[collapsible=icon]:hidden">
               <p>© 2026 Clawculator</p>
               <p className="mt-1 opacity-70">
-                <a href="mailto:hello@clawculator.com" className="hover:text-primary transition-colors">
-                  hello@clawculator.com
-                </a>
+                <a href="mailto:hello@clawculator.com" className="hover:text-primary transition-colors">hello@clawculator.com</a>
               </p>
             </button>
           </DialogTrigger>
