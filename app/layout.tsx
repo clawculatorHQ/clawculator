@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: "Clawculator | Stateless Utility Engine",
   description: "The ultimate minimalist hack-proof toolkit for executing daily web tasks.",
   icons: {
-    icon: "/clawculatorhq.webp",
-    shortcut: "/clawculatorhq.webp",
-    apple: "/clawculatorhq.webp",
+    icon: { url: "/clawculatorhq.webp", type: "image/webp" },
+    shortcut: { url: "/clawculatorhq.webp", type: "image/webp" },
+    apple: { url: "/clawculatorhq.webp", type: "image/webp" },
   },
 };
 
