@@ -45,9 +45,7 @@ export function AppSidebar() {
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">Clawculator</span>
-                  <span className="text-xs text-muted-foreground">
-                    Stateless Utility Engine
-                  </span>
+                  <span className="text-xs text-muted-foreground">Stateless Utility Engine</span>
                 </div>
               </Link>
             </SidebarMenuButton>
@@ -59,11 +57,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton
-                asChild
-                isActive={pathname === "/"}
-                tooltip="Home"
-              >
+              <SidebarMenuButton asChild isActive={pathname === "/"} tooltip="Home">
                 <Link href="/">
                   <Home className="size-4" />
                 </Link>
@@ -112,11 +106,7 @@ export function AppSidebar() {
                   const isActive = pathname === tool.href;
                   return (
                     <SidebarMenuItem key={tool.id}>
-                      <SidebarMenuButton
-                        asChild
-                        isActive={isActive}
-                        tooltip={tool.name}
-                      >
+                      <SidebarMenuButton asChild isActive={isActive} tooltip={tool.name}>
                         <Link href={tool.href} prefetch={false}>
                           <Icon className="size-4" />
                           <span>{tool.name}</span>
@@ -135,10 +125,8 @@ export function AppSidebar() {
         <Dialog>
           <DialogTrigger asChild>
             <button className="w-full p-2 text-xs text-muted-foreground text-left hover:bg-sidebar-accent rounded-md transition-colors group-data-[collapsible=icon]:hidden">
-              <p>© 2026 Clawculator</p>
-              <p className="mt-1 opacity-70">
-                <a href="mailto:hello@clawculator.com" className="hover:text-primary transition-colors">hello@clawculator.com</a>
-              </p>
+              <p>{"© 2026 Clawculator"}</p>
+              <p className="mt-1 opacity-70">hello@clawculator.com</p>
             </button>
           </DialogTrigger>
           <DialogTrigger asChild>
@@ -164,49 +152,18 @@ export function AppSidebar() {
             <div className="grid gap-4 sm:grid-cols-2 text-sm pt-4 border-t">
               <div className="space-y-1">
                 <h3 className="font-medium text-foreground">Contact</h3>
-                <p className="text-muted-foreground">
-                  
-                    href="mailto:hello@clawculator.com"
-                    className="hover:text-primary transition-colors"
-                  >
-                    hello@clawculator.com
-                  </a>
-                </p>
+                <p className="text-muted-foreground">hello@clawculator.com</p>
               </div>
               <div className="space-y-1">
                 <h3 className="font-medium text-foreground">Source</h3>
-                <p className="text-muted-foreground">
-                  
-                    href="https://github.com/clawculatorHQ/clawculator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    clawculatorHQ/clawculator
-                  </a>
-                </p>
+                <p className="text-muted-foreground">clawculatorHQ/clawculator</p>
               </div>
             </div>
             <div className="pt-4 border-t space-y-2">
               <h3 className="font-medium text-foreground text-sm">Built with</h3>
               <div className="flex flex-wrap gap-1.5">
-                {[
-                  { name: "Next.js", url: "https://nextjs.org" },
-                  { name: "React", url: "https://react.dev" },
-                  { name: "Tailwind CSS", url: "https://tailwindcss.com" },
-                  { name: "shadcn/ui", url: "https://ui.shadcn.com" },
-                  { name: "Radix UI", url: "https://radix-ui.com" },
-                  { name: "Lucide", url: "https://lucide.dev" },
-                ].map((lib) => (
-                  
-                    key={lib.name}
-                    href={lib.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs px-2 py-1 rounded-md bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {lib.name}
-                  </a>
+                {["Next.js", "React", "Tailwind CSS", "shadcn/ui", "Radix UI", "Lucide"].map((lib) => (
+                  <span key={lib} className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">{lib}</span>
                 ))}
               </div>
             </div>
