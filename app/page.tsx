@@ -7,19 +7,33 @@ import { Badge } from "@/components/ui/badge";
 export default function Home() {
   return (
     <>
-      {/* Light green page ticker — works perfectly on Hostinger */}
-      <marquee
-        className="fixed top-0 left-0 right-0 z-50 bg-green-100 border-b border-green-200 py-3 text-sm font-mono font-medium text-green-900 overflow-hidden"
-        behavior="scroll"
-        direction="left"
-        scrollamount="6"
-      >
-        🚨 THIS SITE IS FOR SALE! CONTACT EMAIL: HELLO@CLAWCULATOR.COM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        🚨 THIS SITE IS FOR SALE! CONTACT EMAIL: HELLO@CLAWCULATOR.COM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        🚨 THIS SITE IS FOR SALE! CONTACT EMAIL: HELLO@CLAWCULATOR.COM
-      </marquee>
+      {/* Light green ticker bar — pure CSS, TypeScript-safe, works on Hostinger */}
+      <style>{`
+        @keyframes marquee {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
+        }
+        .ticker {
+          animation: marquee 25s linear infinite;
+          display: flex;
+          white-space: nowrap;
+        }
+        .ticker:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
-      {/* Original page content (nothing else changed) */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-green-100 border-b border-green-200 py-3 overflow-hidden text-sm font-mono font-medium text-green-900">
+        <div className="ticker">
+          <div className="flex items-center gap-x-12 px-8">
+            <span>🚨 THIS SITE IS FOR SALE! CONTACT EMAIL: HELLO@CLAWCULATOR.COM 🚨</span>
+            <span>🚨 THIS SITE IS FOR SALE! CONTACT EMAIL: HELLO@CLAWCULATOR.COM 🚨</span>
+            <span>🚨 THIS SITE IS FOR SALE! CONTACT EMAIL: HELLO@CLAWCULATOR.COM 🚨</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Original page content — nothing else changed */}
       <div className="pt-14 p-4 md:p-8 lg:p-10 font-mono">
         {/* Intro */}
         <div className="mb-10 max-w-2xl space-y-3 text-sm text-foreground/80 leading-relaxed">
