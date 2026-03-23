@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* Light green ticker bar at the very top */}
-      <style jsx global>{`
+      <style>{`
         @keyframes marquee {
           from {
             transform: translateX(0);
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Original page content with extra top padding to clear the fixed bar */}
+      {/* Original page content with extra top padding */}
       <div className="pt-14 p-4 md:p-8 lg:p-10 font-mono">
         {/* Intro */}
         <div className="mb-10 max-w-2xl space-y-3 text-sm text-foreground/80 leading-relaxed">
